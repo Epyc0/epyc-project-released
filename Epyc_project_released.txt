@@ -1,0 +1,1245 @@
+
+
+
+--██████╗░███████╗██╗░░░██╗███████╗██╗░░░░░░█████╗░██████╗░███████╗██████╗░  ░█████╗░███╗░░██╗██████╗░
+--██╔══██╗██╔════╝██║░░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗██╔════╝██╔══██╗  ██╔══██╗████╗░██║██╔══██╗
+--██║░░██║█████╗░░╚██╗░██╔╝█████╗░░██║░░░░░██║░░██║██████╔╝█████╗░░██║░░██║  ███████║██╔██╗██║██║░░██║
+--██║░░██║██╔══╝░░░╚████╔╝░██╔══╝░░██║░░░░░██║░░██║██╔═══╝░██╔══╝░░██║░░██║  ██╔══██║██║╚████║██║░░██║
+--██████╔╝███████╗░░╚██╔╝░░███████╗███████╗╚█████╔╝██║░░░░░███████╗██████╔╝  ██║░░██║██║░╚███║██████╔╝
+--╚═════╝░╚══════╝░░░╚═╝░░░╚══════╝╚══════╝░╚════╝░╚═╝░░░░░╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░
+
+--██████╗░███████╗██╗░░░░░███████╗░█████╗░░██████╗███████╗██████╗░  ██████╗░██╗░░░██╗
+--██╔══██╗██╔════╝██║░░░░░██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗  ██╔══██╗╚██╗░██╔╝
+--██████╔╝█████╗░░██║░░░░░█████╗░░███████║╚█████╗░█████╗░░██║░░██║  ██████╦╝░╚████╔╝░
+--██╔══██╗██╔══╝░░██║░░░░░██╔══╝░░██╔══██║░╚═══██╗██╔══╝░░██║░░██║  ██╔══██╗░░╚██╔╝░░
+--██║░░██║███████╗███████╗███████╗██║░░██║██████╔╝███████╗██████╔╝  ██████╦╝░░░██║░░░
+--╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░  ╚═════╝░░░░╚═╝░░░
+
+--███╗░░░███╗░█████╗░██████╗░██╗░░██╗██╗░░░██╗███████╗░░░██╗░██╗░░░██╗██╗░█████╗░░░██╗██╗██████╗░  ██╗███████╗
+--████╗░████║██╔══██╗██╔══██╗██║░██╔╝██║░░░██║╚════██║██████████╗░██╔╝██║██╔══██╗░██╔╝██║╚════██╗  ██║██╔════╝
+--██╔████╔██║███████║██████╔╝█████═╝░██║░░░██║░░███╔═╝╚═██╔═██╔═╝██╔╝░██║╚██████║██╔╝░██║░█████╔╝  ██║█████╗░░
+--██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗░██║░░░██║██╔══╝░░██████████╗███████║░╚═══██║███████║░╚═══██╗  ██║██╔══╝░░
+--██║░╚═╝░██║██║░░██║██║░░██║██║░╚██╗╚██████╔╝███████╗╚██╔═██╔══╝╚════██║░█████╔╝╚════██║██████╔╝  ██║██║░░░░░
+--╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░╚══════╝░╚═╝░╚═╝░░░░░░░░╚═╝░╚════╝░░░░░░╚═╝╚═════╝░  ╚═╝╚═╝░░░░░
+
+--██╗░░░██╗░█████╗░██╗░░░██╗  ░█████╗░██████╗░███████╗  ░██████╗░█████╗░███╗░░░███╗███████╗██╗░░██╗░█████╗░░██╗░░░░░░░██╗
+--╚██╗░██╔╝██╔══██╗██║░░░██║  ██╔══██╗██╔══██╗██╔════╝  ██╔════╝██╔══██╗████╗░████║██╔════╝██║░░██║██╔══██╗░██║░░██╗░░██║
+--░╚████╔╝░██║░░██║██║░░░██║  ███████║██████╔╝█████╗░░  ╚█████╗░██║░░██║██╔████╔██║█████╗░░███████║██║░░██║░╚██╗████╗██╔╝
+--░░╚██╔╝░░██║░░██║██║░░░██║  ██╔══██║██╔══██╗██╔══╝░░  ░╚═══██╗██║░░██║██║╚██╔╝██║██╔══╝░░██╔══██║██║░░██║░░████╔═████║░
+--░░░██║░░░╚█████╔╝╚██████╔╝  ██║░░██║██║░░██║███████╗  ██████╔╝╚█████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝░░╚██╔╝░╚██╔╝░
+--░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░
+
+--██╗░░░██╗██╗███████╗░██╗░░░░░░░██╗██╗███╗░░██╗░██████╗░  ████████╗██╗░░██╗██╗░██████╗
+--██║░░░██║██║██╔════╝░██║░░██╗░░██║██║████╗░██║██╔════╝░  ╚══██╔══╝██║░░██║██║██╔════╝
+--╚██╗░██╔╝██║█████╗░░░╚██╗████╗██╔╝██║██╔██╗██║██║░░██╗░  ░░░██║░░░███████║██║╚█████╗░
+--░╚████╔╝░██║██╔══╝░░░░████╔═████║░██║██║╚████║██║░░╚██╗  ░░░██║░░░██╔══██║██║░╚═══██╗
+--░░╚██╔╝░░██║███████╗░░╚██╔╝░╚██╔╝░██║██║░╚███║╚██████╔╝  ░░░██║░░░██║░░██║██║██████╔╝
+--░░░╚═╝░░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░  ░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═════╝░
+
+--████████╗██╗░░██╗███████╗███╗░░██╗  ░██████╗░░█████╗░  ███████╗██╗░░░██╗░█████╗░██╗░░██╗
+--╚══██╔══╝██║░░██║██╔════╝████╗░██║  ██╔════╝░██╔══██╗  ██╔════╝██║░░░██║██╔══██╗██║░██╔╝
+--░░░██║░░░███████║█████╗░░██╔██╗██║  ██║░░██╗░██║░░██║  █████╗░░██║░░░██║██║░░╚═╝█████═╝░
+--░░░██║░░░██╔══██║██╔══╝░░██║╚████║  ██║░░╚██╗██║░░██║  ██╔══╝░░██║░░░██║██║░░██╗██╔═██╗░
+--░░░██║░░░██║░░██║███████╗██║░╚███║  ╚██████╔╝╚█████╔╝  ██║░░░░░╚██████╔╝╚█████╔╝██║░╚██╗
+--░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝  ░╚═════╝░░╚════╝░  ╚═╝░░░░░░╚═════╝░░╚════╝░╚═╝░░╚═╝
+
+--██╗░░░██╗░█████╗░██╗░░░██╗██████╗░░██████╗███████╗██╗░░░░░███████╗
+--╚██╗░██╔╝██╔══██╗██║░░░██║██╔══██╗██╔════╝██╔════╝██║░░░░░██╔════╝
+--░╚████╔╝░██║░░██║██║░░░██║██████╔╝╚█████╗░█████╗░░██║░░░░░█████╗░░
+--░░╚██╔╝░░██║░░██║██║░░░██║██╔══██╗░╚═══██╗██╔══╝░░██║░░░░░██╔══╝░░
+--░░░██║░░░╚█████╔╝╚██████╔╝██║░░██║██████╔╝███████╗███████╗██║░░░░░
+--░░░╚═╝░░░░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚══════╝╚═╝░░░░░
+
+--░█████╗░░██████╗░██████╗██╗░░██╗░█████╗░██╗░░░░░███████╗--
+--██╔══██╗██╔════╝██╔════╝██║░░██║██╔══██╗██║░░░░░██╔════╝
+--███████║╚█████╗░╚█████╗░███████║██║░░██║██║░░░░░█████╗░░--
+--██╔══██║░╚═══██╗░╚═══██╗██╔══██║██║░░██║██║░░░░░██╔══╝░░--
+--██║░░██║██████╔╝██████╔╝██║░░██║╚█████╔╝███████╗███████╗
+--╚═╝░░╚═╝╚═════╝░╚═════╝░╚═╝░░╚═╝░╚════╝░╚══════╝╚══════╝--
+
+
+
+
+
+
+
+
+local pl = game:GetService("Players"):GetPlayerByUserId(102092029)
+local sc = script.Parent
+local UIS = game:GetService("UserInputService")
+local totally = false
+local kohl = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Settings = Instance.new("TextButton")
+local Troll = Instance.new("TextButton")
+local aboose = Instance.new("TextButton")
+local Logo = Instance.new("ImageLabel")
+local stop = Instance.new("TextButton")
+local color = Instance.new("ImageLabel")
+local rgb = Instance.new("ImageLabel")
+local sksk = Instance.new("ImageLabel")
+local Greet = Instance.new("TextLabel")
+local cred = Instance.new("TextLabel")
+local ver = Instance.new("TextLabel")
+
+local Explode = Instance.new("TextButton")
+local Respawn = Instance.new("TextButton")
+local crash = Instance.new("TextButton")
+local kill = Instance.new("TextButton")
+local messup = Instance.new("TextButton")
+local seizure = Instance.new("TextButton")
+local ruin = Instance.new("TextLabel")
+local Trol = Instance.new("TextLabel")
+local cj = Instance.new("TextButton")
+local LOU = Instance.new("TextButton")
+local snas = Instance.new("TextButton")
+
+local FUCKU = game.Players.LocalPlayer
+local satan = Instance.new("TextButton")
+local pepsi = Instance.new("TextButton")
+local muslim = Instance.new("TextButton")
+local setting = Instance.new("TextLabel")
+local Blue = Instance.new("TextButton")
+local Red = Instance.new("TextButton")
+local Pink = Instance.new("TextButton")
+local SHITT = FUCKU.UserId
+local Green = Instance.new("TextButton")
+local RGB = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local client = game.Players.LocalPlayer
+local ImageLabel = Instance.new("ImageLabel")
+local stopping = false
+local notverified = kohl
+local discord = Instance.new("Sound")
+local ScreenGui = Instance.new("ScreenGui")
+local FRUM = Instance.new("Frame")
+local Login = false 
+local pling = Instance.new("Sound")
+local moveintro = Frame
+local hidden = false
+local assad = Instance.new("Sound")
+local goon = false
+local player=game.Players.LocalPlayer
+local biggay = true
+
+assad.Parent = kohl
+assad.Volume = 10
+assad.SoundId = 'rbxassetid://723684779'
+
+rgb.Visible = false
+
+
+
+
+print("Developed by Markuz#4943, any other print with any other author than this means that the script is skidded")
+
+
+
+
+discord.Parent = kohl
+discord.Volume = .5
+discord.Looped = true
+discord.SoundId = 'rbxassetid://4540664171'
+
+game.Players:Chat("music 842009513")
+wait()
+ImageLabel.ImageTransparency = 1
+ImageLabel.BackgroundTransparency = 1
+
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+FRUM.Parent = ScreenGui
+FRUM.BackgroundColor3 = Color3.new(1, 1, 1)
+FRUM.Position = UDim2.new(0.128528967, 0, 0.0817717239, 0)
+FRUM.Size = UDim2.new(0, 100, 0, 100)
+FRUM.BackgroundTransparency = 1
+ImageLabel.Parent = FRUM
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+
+ImageLabel.Position = UDim2.new(6.57695436, 0, 2.93999999, 0)
+ImageLabel.Size = UDim2.new(0, 188, 0, 187)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=5222666274"
+
+
+local blur = Instance.new("BlurEffect", game.Lighting)
+
+
+
+pling.Parent = kohl
+pling.Volume = 10
+pling.SoundId = 'rbxassetid://993959716'
+
+wait()
+for f = 1,10 do
+blur.Size = blur.Size + .1
+wait()
+end
+
+wait()
+for e = 1,20 do
+ImageLabel.ImageTransparency = ImageLabel.ImageTransparency -.05
+wait()
+end
+wait(.2)
+for re = 1,20 do
+ImageLabel.ImageTransparency = ImageLabel.ImageTransparency +.05
+wait()
+end
+
+pling:Play()
+
+wait()
+
+wait()
+blur.Size = 9
+wait()
+blur.Size = 6
+wait()
+blur.Size = 4
+wait()
+blur.Size = 2
+wait()
+blur.Size = 0
+game.Players:Chat("music 5187733148")
+
+
+discord:Play()
+
+for i = 1,1000 do
+game.Players:Chat("music watchu lookin at faggot")
+end
+wait()
+game.Players:Chat("logs")
+
+local nott = Instance.new("BindableFunction")
+nott.OnInvoke = callback
+
+
+wait(.1)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "From Epyc Staff:";
+	Text = "Press F9 for all commands";
+	Icon = "";
+	Duration = 10;
+	
+	callback = nott;
+})
+wait(.1)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "From Epyc Staff:";
+	Text = "Thank you for using Epyc Project, if you encounter anything weird with the GUI then please DM CEO of racism#6042";
+	Icon = "rbxassetid://5222666274";
+	Duration = 10;
+	
+	callback = nott;
+})
+
+
+
+game.Players:Chat("clone White lives matter too")
+wait()
+game.Players:Chat("logs")
+wait()
+
+
+-------------------------------------------------------
+
+print"r = respawn all, ah = refresh all, idiot = clears, p others = punish others, die = unchar all"
+print"p others = punish others,hmm = kill others, dagger = sword me, hoho = fuck the colors"
+print"F1 = airstrike, F2 = tp you to random, F3 = Tp all to you, F4 = freeze all, F5 = Fly yourself, F6 = Reset yourself"
+print"F7 = Fling others, F8 = removetools others, F10 = hide GUI, F11 = lag server"
+
+
+
+
+ player.Chatted:connect(function(msg)
+    if msg == "birds" then
+     for i = 1,5 do
+       game.Players:Chat("m Everyone shut up angry birds is playing")
+       wait()
+       end
+       game.Players:Chat("spin all")
+       wait()
+       game.Players:Chat("unhat all")
+       wait()
+       game.Players:Chat("hat all 413657049")
+        wait()
+    game.Players:Chat("music 142368124")
+    wait()
+        game.Players:Chat("shirt all 1957018025")
+        wait()
+        game.Players:Chat("pants all 2874081920")
+    end
+end)   
+    
+
+
+player.Chatted:connect(function(msg)
+    if msg == "hmm" then
+       game.Players:Chat("kill others")
+       wait()
+
+       for e = 1,500 do 
+            game.Players:Chat("clone I am thonking...")
+        end
+    end
+end)
+player.Chatted:connect(function(msg)
+    if msg == "dagger" then
+       game.Players:Chat("sword me")
+       for e = 1,500 do 
+           game.Players:Chat("clone dagger")
+        end
+    end
+end)
+
+-------------------------------------------------------
+
+game.Players.PlayerAdded:Connect(function(NOU)
+
+      NOU.Chatted:Connect(function(msg)
+           if string.lower(msg) == "clr" then
+              for i = 1,10 do
+               game.Players:Chat("pm others clr is not allowed.")
+               wait()
+              
+              end
+           game.Players:Chat("kill others")
+           wait()
+           game.Players:Chat("music 5149881554")
+        end
+      end)
+end)
+
+game.Players.PlayerAdded:Connect(function(NOU)
+      NOU.Chatted:Connect(function(msg)
+           if string.lower(msg) == "gear me 110789105" then
+              for i = 1,10 do
+               game.Players:Chat("Rage table is not allowed.")
+               wait()
+              
+              end
+           game.Players:Chat("kill others")
+           wait()
+           game.Players:Chat("music 5149881554")
+        end
+      end)
+end)
+
+game.Players.PlayerAdded:Connect(function(NOU)
+      NOU.Chatted:Connect(function(msg)
+           if string.lower(msg) == "gear me 115377964" then
+              for i = 1,10 do
+               game.Players:Chat("Finger lasers not allowed.")
+               wait()
+              
+              end
+           game.Players:Chat("kill others")
+           wait()
+           game.Players:Chat("music 5149881554")
+        end
+      end)
+end)
+
+
+
+kohl.Name = "kohl"
+kohl.Parent = game.CoreGui
+
+Frame.Parent = kohl
+Frame.BackgroundColor3 = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Frame.BorderColor3 = Color3.new(1, 1, 1)
+Frame.Position = UDim2.new(0.70208025, 0, 0.345826238, 0)
+Frame.Size = UDim2.new(0, 358, 0, 351)
+Frame.Active = true
+Frame.Draggable = true
+Frame.BorderColor3 = Color3.new(0.670588, 0.670588, 0.670588)
+
+Settings.Name = "Settings"
+Settings.Parent = Frame
+Settings.BackgroundColor3 = Color3.new(1, 1, 1)
+Settings.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Settings.BorderSizePixel = 2
+Settings.Position = UDim2.new(0.764910758, 0, -0.0018103309, 0)
+Settings.Size = UDim2.new(0, 84, 0, 25)
+Settings.Style = Enum.ButtonStyle.RobloxButton
+Settings.Font = Enum.Font.Code
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.new(1, 1, 1)
+Settings.TextSize = 15
+Settings.MouseButton1Down:Connect(function()
+Settings.Size = UDim2.new(0, 84, 0, 30)	
+Troll.Size = UDim2.new(0, 84, 0, 25)	
+aboose.Size = UDim2.new(0, 84, 0, 25)		
+Explode.Visible = false
+Respawn.Visible = false
+crash.Visible = false
+kill.Visible = false
+messup.Visible = false
+seizure.Visible = false
+ruin.Visible = false
+	
+	LOU.Visible = false
+	satan.Visible = false
+	pepsi.Visible = false
+	snas.Visible = false
+	muslim.Visible = false
+	cj.Visible = false
+	Trol.Visible = false
+	
+	Blue.Visible = true
+	Red.Visible = true
+	stop.Visible = true
+	RGB.Visible = true
+	Green.Visible = true
+	Pink.Visible = true
+	setting.Visible = true
+	Greet.Visible = false
+	
+end)
+
+Troll.Name = "Troll"
+Troll.Parent = Frame
+Troll.BackgroundColor3 = Color3.new(1, 1, 1)
+Troll.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Troll.BorderSizePixel = 2
+Troll.Position = UDim2.new(0.382075578, 0, -0.0018103309, 0)
+Troll.Size = UDim2.new(0, 84, 0, 25)
+Troll.Style = Enum.ButtonStyle.RobloxButton
+Troll.Font = Enum.Font.Code
+Troll.Text = "Troll"
+Troll.TextColor3 = Color3.new(1, 1, 1)
+Troll.TextSize = 20
+Troll.MouseButton1Down:Connect(function()
+Troll.Size = UDim2.new(0, 84, 0, 30)		
+Explode.Visible = false
+Respawn.Visible = false
+crash.Visible = false
+kill.Visible = false
+messup.Visible = false
+seizure.Visible = false
+ruin.Visible = false
+	
+	LOU.Visible = true
+	satan.Visible = true
+	pepsi.Visible = true
+	snas.Visible = true
+	muslim.Visible = true
+	cj.Visible = true
+	Trol.Visible = true
+	
+	Blue.Visible = false
+	Red.Visible = false
+	stop.Visible = false
+	RGB.Visible = false
+	Green.Visible = false
+	Pink.Visible = false
+	setting.Visible = false
+	Greet.Visible = false
+	Settings.Size = UDim2.new(0, 84, 0, 25)	
+	Troll.Size = UDim2.new(0, 84, 0, 30)	
+	aboose.Size = UDim2.new(0, 84, 0, 25)		
+end)
+aboose.Name = "aboose"
+aboose.Parent = Frame
+aboose.BackgroundColor3 = Color3.new(1, 1, 1)
+aboose.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+aboose.BorderSizePixel = 2
+aboose.Position = UDim2.new(-0.00373128615, 0, -0.0018103309, 0)
+aboose.Size = UDim2.new(0, 84, 0, 25)
+aboose.Style = Enum.ButtonStyle.RobloxButton
+aboose.Font = Enum.Font.Code
+aboose.Text = "Abuse"
+aboose.TextColor3 = Color3.new(1, 1, 1)
+aboose.TextSize = 20
+aboose.MouseButton1Down:Connect(function()
+	Settings.Size = UDim2.new(0, 84, 0, 25)	
+	Troll.Size = UDim2.new(0, 84, 0, 25)	
+	aboose.Size = UDim2.new(0, 84, 0, 30)	
+Explode.Visible = true
+Respawn.Visible = true
+crash.Visible = true
+kill.Visible = true
+messup.Visible = true
+seizure.Visible = true
+ruin.Visible = true
+	
+	LOU.Visible = false
+	satan.Visible = false
+	pepsi.Visible = false
+	snas.Visible = false
+	muslim.Visible = false
+	cj.Visible = false
+	Trol.Visible = false
+	
+	Blue.Visible = false
+	Red.Visible = false
+	stop.Visible = false
+	RGB.Visible = false
+	Green.Visible = false
+	Pink.Visible = false
+	setting.Visible = false
+	Greet.Visible = false
+	
+end)
+
+
+Logo.Name = "Logo"
+Logo.Parent = Frame
+Logo.BackgroundColor3 = Color3.new(1, 1, 1)
+Logo.BackgroundTransparency = 1
+Logo.Position = UDim2.new(-0.02055053, 0, -0.113025138, 0)
+Logo.Size = UDim2.new(0, 14, 0, 14)
+Logo.ZIndex = 3
+Logo.Image = "http://www.roblox.com/asset/?id=5222666274"
+
+stop.Name = "stop"
+stop.Parent = Frame
+stop.BackgroundColor3 = Color3.new(1, 1, 1)
+stop.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+stop.BorderSizePixel = 2
+stop.Position = UDim2.new(0.0871400833, 0, 0.723703563, 0)
+stop.Size = UDim2.new(0, 141, 0, 48)
+stop.Visible = false
+stop.Style = Enum.ButtonStyle.RobloxButton
+stop.Font = Enum.Font.Code
+stop.Text = "Stop GUI music"
+stop.TextColor3 = Color3.new(1, 1, 1)
+stop.TextSize = 15
+stop.MouseButton1Down:connect(function()
+	if stopping == false then
+		discord:Stop()
+		stopping = true
+		stop.Text = "Play GUI music"
+	elseif stopping == true then
+		discord:Play()
+		stopping = false
+		stop.Text = "Stop GUI music"
+	end
+end)
+
+color.Name = "color"
+color.Parent = Frame
+color.BackgroundColor3 = Color3.new(0.482353, 0.517647, 1)
+color.BackgroundTransparency = 1
+color.Position = UDim2.new(-0.00703097647, 0, -0.0349173546, 0)
+color.Size = UDim2.new(0, 365, 0, 12)
+color.Image = "rbxassetid://3570695787"
+color.ImageColor3 = Color3.new(0.670588, 0.670588, 0.670588)
+color.ScaleType = Enum.ScaleType.Slice
+color.SliceCenter = Rect.new(100, 100, 100, 100)
+
+rgb.Name = "rgb"
+rgb.Parent = Frame
+rgb.BackgroundColor3 = Color3.new(0.482353, 0.517647, 1)
+rgb.BackgroundTransparency = 1
+rgb.Position = UDim2.new(-0.00703097647, 0, -0.0349173546, 0)
+rgb.Size = UDim2.new(0, 365, 0, 12)
+rgb.Image = "rbxassetid://3570695787"
+rgb.ImageColor3 = Color3.new(0.670588, 0.670588, 0.670588)
+rgb.ScaleType = Enum.ScaleType.Slice
+rgb.SliceCenter = Rect.new(100, 100, 100, 100)
+
+sksk.Name = "sksk"
+sksk.Parent = Frame
+sksk.BackgroundColor3 = Color3.new(0.482353, 0.517647, 1)
+sksk.BackgroundTransparency = 1
+sksk.Position = UDim2.new(-0.0697618201, 0, -0.133000001, 0)
+sksk.Size = UDim2.new(0, 411, 0, 25)
+sksk.Image = "rbxassetid://3570695787"
+sksk.ImageColor3 = Color3.new(0.776471, 0.776471, 0.776471)
+sksk.ScaleType = Enum.ScaleType.Slice
+sksk.SliceCenter = Rect.new(100, 100, 100, 100)
+
+Greet.Name = "Greet"
+Greet.Parent = Frame
+Greet.BackgroundColor3 = Color3.new(1, 1, 1)
+Greet.BackgroundTransparency = 1
+Greet.Position = UDim2.new(0.117263069, 0, 0.480030298, 0)
+Greet.Size = UDim2.new(0, 282, 0, 50)
+Greet.Font = Enum.Font.Arial
+Greet.Text = "Welcome To Epyc Project, "..client.Name
+Greet.TextColor3 = Color3.new(1, 1, 1)
+Greet.TextSize = 15
+
+cred.Name = "cred"
+cred.Parent = Frame
+cred.BackgroundColor3 = Color3.new(1, 1, 1)
+cred.BackgroundTransparency = 1
+cred.Position = UDim2.new(0.65228647, 0, 0.935938716, 0)
+cred.Size = UDim2.new(0, 124, 0, 27)
+cred.Font = Enum.Font.SourceSans
+cred.Text = "Made by: Markuz#4943"
+cred.TextColor3 = Color3.new(1, 1, 1)
+cred.TextSize = 15
+
+ver.Name = "ver"
+ver.Parent = Frame
+ver.BackgroundColor3 = Color3.new(1, 1, 1)
+ver.BackgroundTransparency = 1
+ver.Position = UDim2.new(-0.00144432485, 0, 0.935938716, 0)
+ver.Size = UDim2.new(0, 81, 0, 27)
+ver.Font = Enum.Font.SourceSans
+ver.Text = "Version v1"
+ver.TextColor3 = Color3.new(1, 1, 1)
+ver.TextSize = 15
+
+Explode.Name = "Explode"
+Explode.Parent = Frame
+Explode.BackgroundColor3 = Color3.new(1, 1, 1)
+Explode.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Explode.BorderSizePixel = 2
+Explode.Position = UDim2.new(0.0871401355, 0, 0.290795296, 0)
+Explode.Size = UDim2.new(0, 141, 0, 48)
+Explode.Visible = false
+Explode.Style = Enum.ButtonStyle.RobloxButton
+Explode.Font = Enum.Font.Code
+Explode.Text = "Explode others"
+Explode.TextColor3 = Color3.new(1, 1, 1)
+Explode.TextSize = 15
+Explode.MouseButton1Down:Connect(function()
+	for i = 1,5000 do
+		game.Players:Chat("explode others")
+		
+	end
+	wait(.5)
+	for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+Respawn.Name = "Respawn"
+Respawn.Parent = Frame
+Respawn.BackgroundColor3 = Color3.new(1, 1, 1)
+Respawn.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Respawn.BorderSizePixel = 2
+Respawn.Position = UDim2.new(0.545506656, 0, 0.49185586, 0)
+Respawn.Size = UDim2.new(0, 141, 0, 48)
+Respawn.Visible = false
+Respawn.Style = Enum.ButtonStyle.RobloxButton
+Respawn.Font = Enum.Font.Code
+Respawn.Text = "Respawn all"
+Respawn.TextColor3 = Color3.new(1, 1, 1)
+Respawn.TextSize = 15
+Respawn.MouseButton1Down:Connect(function()
+		game.Players:Chat("respawn all")
+	for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+
+
+
+crash.Name = "crash"
+crash.Parent = Frame
+crash.BackgroundColor3 = Color3.new(1, 1, 1)
+crash.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+crash.BorderSizePixel = 2
+crash.Position = UDim2.new(0.545506656, 0, 0.723703563, 0)
+crash.Size = UDim2.new(0, 141, 0, 48)
+crash.Visible = false
+crash.Style = Enum.ButtonStyle.RobloxButton
+crash.Font = Enum.Font.Code
+crash.Text = "Crash server"
+crash.TextColor3 = Color3.new(1, 1, 1)
+crash.TextSize = 17
+local owner = false
+crash.MouseButton1Down:Connect(function()
+
+if pl then
+    owner = true
+    
+end
+
+if owner == true then
+    game.StarterGui:SetCore("SendNotification", {
+	Title = "From Epyc Staff:";
+	Text = "Creator is in server, no crashing this time, "..client.name;
+	Icon = "";
+	Duration = 5;
+	
+	callback = nott;
+}) 
+wait(2)
+game.Players.LocalPlayer:kick("Trying to shut down server while creator is in server :(")
+
+end
+
+if totally == false then
+    
+game.StarterGui:SetCore("SendNotification", {
+	Title = "From Epyc Staff:";
+	Text = "It is gonna lag like crazy on low end computers, and the lag will drive them nuts";
+	Icon = "";
+	Duration = 5;
+	
+	callback = nott;
+})
+wait(.5)
+crash.Text = "100% sure?"
+totally = true
+wait(5)
+totally = false
+crash.Text = "Crash server"
+
+elseif totally == true then
+    game.StarterGui:SetCore("SendNotification", {
+	Title = "From Epyc Staff:";
+	Text = "We hope to see you soon, "..client.name;
+	Icon = "";
+	Duration = 5;
+	
+	callback = nott;
+}) 
+for i = 1,30 do
+game.Players:Chat("pm Do logs now!!!")
+wait()
+end
+
+wait(2)
+
+
+for i = 1,180000 do
+game.Players:Chat("pm others Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu Hewwo uwu ")
+wait()
+game.Players:Chat("setgrav others -9e9")
+wait()
+end
+end
+end)
+
+
+
+kill.Name = "kill"
+kill.Parent = Frame
+kill.BackgroundColor3 = Color3.new(1, 1, 1)
+kill.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+kill.BorderSizePixel = 2
+kill.Position = UDim2.new(0.087140128, 0, 0.49185586, 0)
+kill.Size = UDim2.new(0, 141, 0, 48)
+kill.Visible = false
+kill.Style = Enum.ButtonStyle.RobloxButton
+kill.Font = Enum.Font.Code
+kill.Text = "Kill others"
+kill.TextColor3 = Color3.new(1, 1, 1)
+kill.TextSize = 18
+kill.MouseButton1Down:Connect(function()
+		game.Players:Chat("kill others")
+	for e = 1,100 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+messup.Name = "messup"
+messup.Parent = Frame
+messup.BackgroundColor3 = Color3.new(1, 1, 1)
+messup.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+messup.BorderSizePixel = 2
+messup.Position = UDim2.new(0.087140128, 0, 0.723703563, 0)
+messup.Size = UDim2.new(0, 141, 0, 48)
+messup.Visible = false
+messup.Style = Enum.ButtonStyle.RobloxButton
+messup.Font = Enum.Font.Code
+messup.Text = "Mess up server"
+messup.TextColor3 = Color3.new(1, 1, 1)
+messup.TextSize = 15
+messup.MouseButton1Down:connect(function()
+	game.Players:Chat("music 317987498")
+	wait(.1)
+	game.Players:Chat("fogend 300")
+	wait(.1)
+	game.Players:Chat("fogcolor 255 0 0")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 255 255")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 0 0")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 255 255")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 0 0")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 255 255")
+	wait(.5)
+	game.Players:Chat("fogcolor 255 0 0")
+	wait(.1)
+	game.Players :Chat("music 130768997")
+	wait(.1)
+	game.Players:Chat("fogend 200")
+	wait(.1)
+	game.Players:Chat("fogend 100")
+	wait(.1)
+	game.Players:Chat("fogend 50")
+	wait(.1)
+	game.Players:Chat("fogend 20")
+	wait(.1)
+	game.Players:Chat("fogend 0")
+	wait(1)
+	game.Players:Chat("music 410883528")
+	wait(.1)
+	game.Players:Chat("m Have fun spamming fix and clr because that will totally help")
+	wait(1)
+	game.Players:Chat("m Have fun spamming fix and clr because that will totally help")
+	wait(5)
+	
+	
+	while true do
+		
+		game.Players:Chat("setgrav others -9e9")
+		wait()
+		game.Players:Chat("fogend 0")
+		wait()
+		game.Players:Chat("flash")
+		wait()
+		game.Players:Chat("h Have fun spamming fix and clr because that will totally help")
+		wait()
+		
+	end
+end)
+seizure.Name = "seizure"
+seizure.Parent = Frame
+seizure.BackgroundColor3 = Color3.new(1, 1, 1)
+seizure.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+seizure.BorderSizePixel = 2
+seizure.Position = UDim2.new(0.545506656, 0, 0.290795296, 0)
+seizure.Size = UDim2.new(0, 141, 0, 48)
+seizure.Visible = false
+seizure.Style = Enum.ButtonStyle.RobloxButton
+seizure.Font = Enum.Font.Code
+seizure.Text = "Seizure others"
+seizure.TextColor3 = Color3.new(1, 1, 1)
+seizure.TextSize = 15
+seizure.MouseButton1Down:Connect(function()
+		game.Players:Chat("seizure others")
+	for e = 1,100 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+ruin.Name = "ruin"
+ruin.Parent = Frame
+ruin.BackgroundColor3 = Color3.new(1, 1, 1)
+ruin.BackgroundTransparency = 1
+ruin.Position = UDim2.new(0.120223403, 0, 0.134941772, 0)
+ruin.Size = UDim2.new(0, 282, 0, 36)
+ruin.Visible = false
+ruin.Font = Enum.Font.SourceSans
+ruin.Text = "Ruin the fun for others"
+ruin.TextColor3 = Color3.new(1, 1, 1)
+ruin.TextSize = 20
+
+Trol.Name = "Trol"
+Trol.Parent = Frame
+Trol.BackgroundColor3 = Color3.new(1, 1, 1)
+Trol.BackgroundTransparency = 1
+Trol.Position = UDim2.new(0.120223403, 0, 0.134941772, 0)
+Trol.Size = UDim2.new(0, 282, 0, 36)
+Trol.Visible = false
+Trol.Font = Enum.Font.SourceSans
+Trol.Text = "Trolling section"
+Trol.TextColor3 = Color3.new(1, 1, 1)
+Trol.TextSize = 20
+
+cj.Name = "cj"
+cj.Parent = Frame
+cj.BackgroundColor3 = Color3.new(1, 1, 1)
+cj.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+cj.BorderSizePixel = 2
+cj.Position = UDim2.new(0.545506656, 0, 0.290795296, 0)
+cj.Size = UDim2.new(0, 141, 0, 48)
+cj.Visible = false
+cj.Style = Enum.ButtonStyle.RobloxButton
+cj.Font = Enum.Font.Code
+cj.Text = "Man behind"
+cj.TextColor3 = Color3.new(1, 1, 1)
+cj.TextSize = 15
+cj.MouseButton1Down:connect(function()
+game.Players:Chat("god me")
+game.Players:Chat("paint all plum")
+game.Players:Chat("hat all 5063657446")
+game.Players:Chat("shirt all 5175014480")
+game.Players:Chat("pants all 5183850011")
+game.Players:Chat("music 194263739")
+game.Players:Chat("gear all 121946387")
+wait()
+for e = 1,1000 do
+		game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+LOU.Name = "LOU"
+LOU.Parent = Frame
+LOU.BackgroundColor3 = Color3.new(1, 1, 1)
+LOU.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+LOU.BorderSizePixel = 2
+LOU.Position = UDim2.new(0.0871400833, 0, 0.290795296, 0)
+LOU.Size = UDim2.new(0, 141, 0, 48)
+LOU.Visible = false
+LOU.Style = Enum.ButtonStyle.RobloxButton
+LOU.Font = Enum.Font.Code
+LOU.Text = "Last of us"
+LOU.TextColor3 = Color3.new(1, 1, 1)
+LOU.TextSize = 15
+LOU.MouseButton1Down:Connect(function()
+	game.Players:Chat("music 156495206")
+	
+	--joel
+	game.Players:Chat("unhat all")
+	game.Players:Chat("shirt me 120818378")
+	game.Players:Chat("hat me 4995497755")
+	game.Players:Chat("pants me 185888262")
+	game.Players:Chat("name me Joel")
+	game.Players:Chat("gear me 94233286")
+	game.Players:Chat("hat me 4735347390")
+	game.Players:Chat("face me 173789324")
+	--joel
+	--ellie
+	game.Players:Chat("shirt others 161125198")
+	game.Players:Chat("name others Ellie")
+	game.Players:Chat("pants others 121375974")
+	game.Players:Chat("gear others 95354288")
+	game.Players:Chat("hat others 5063973292")
+	game.Players:Chat("face others 391496223")
+	wait()
+	for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+snas.Name = "snas"
+snas.Parent = Frame
+snas.BackgroundColor3 = Color3.new(1, 1, 1)
+snas.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+snas.BorderSizePixel = 2
+snas.Position = UDim2.new(0.0871400833, 0, 0.49185586, 0)
+snas.Size = UDim2.new(0, 141, 0, 48)
+snas.Visible = false
+snas.Style = Enum.ButtonStyle.RobloxButton
+snas.Font = Enum.Font.Code
+snas.Text = "Sans"
+snas.TextColor3 = Color3.new(1, 1, 1)
+snas.TextSize = 18
+snas.MouseButton1Down:connect(function()
+	game.Players:Chat("gear me 115377964")
+	game.Players:Chat("god me")
+	game.Players:Chat("music 331891292")
+	game.Players:Chat('unhat all')
+	game.Players:Chat("unpackage all")
+	--kids
+	game.Players:Chat('paint others new yeller')
+	game.Players:Chat('name others Kid')
+	game.Players:Chat("shirt others 1245132873")
+	game.Players:Chat('pants others 1704983174')
+	game.Players:Chat('face others 391496223')
+	game.Players:Chat("hat others 20573078")
+	--kdis
+	--sans
+	game.Players:Chat('name me Sans')
+	game.Players:Chat('paint me lily white')
+	game.Players:Chat("shirt me 3159432648")
+	game.Players:Chat('pants me 3284894118')
+	game.Players:Chat('face me 8329679')
+	--sans
+	wait(1)
+	for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+
+	
+end)
+
+
+satan.Name = "satan"
+satan.Parent = Frame
+satan.BackgroundColor3 = Color3.new(1, 1, 1)
+satan.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+satan.BorderSizePixel = 2
+satan.Position = UDim2.new(0.545506656, 0, 0.49185586, 0)
+satan.Size = UDim2.new(0, 141, 0, 48)
+satan.Visible = false
+satan.Style = Enum.ButtonStyle.RobloxButton
+satan.Font = Enum.Font.Code
+satan.Text = "Satan"
+satan.TextColor3 = Color3.new(1, 1, 1)
+satan.TextSize = 15
+satan.MouseButton1Down:Connect(function()
+	game.Players:Chat("paint others black")
+	game.Players:Chat("cape others black")
+	game.Players:Chat("Name others Demon")
+	game.Players:Chat("name me Lucifer")
+	game.Players:Chat("paint me maroon")
+	game.Players:Chat("cape me maroon")
+	game.Players:Chat("fogend 100 ")
+	game.Players:Chat("fogcolor 255 0 0")
+	game.Players:Chat("music 329447230")
+	wait()
+	for e = 1,1000 do
+		game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+pepsi.Name = "pepsi"
+pepsi.Parent = Frame
+pepsi.BackgroundColor3 = Color3.new(1, 1, 1)
+pepsi.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+pepsi.BorderSizePixel = 2
+pepsi.Position = UDim2.new(0.545506656, 0, 0.723703563, 0)
+pepsi.Size = UDim2.new(0, 141, 0, 48)
+pepsi.Visible = false
+pepsi.Style = Enum.ButtonStyle.RobloxButton
+pepsi.Font = Enum.Font.Code
+pepsi.Text = "Pepsi"
+pepsi.TextColor3 = Color3.new(1, 1, 1)
+pepsi.TextSize = 17
+pepsi.MouseButton1Down:Connect(function()
+	
+	game.Players:Chat("music 525289290")
+	wait()
+	game.Players:Chat("unhat all")
+	game.Players:Chat("paint all lapis")
+game.Players:Chat("pants all 3118166203")
+	wait()
+for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+end)
+
+muslim.Name = "muslim"
+muslim.Parent = Frame
+muslim.BackgroundColor3 = Color3.new(1, 1, 1)
+muslim.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+muslim.BorderSizePixel = 2
+muslim.Position = UDim2.new(0.0871400833, 0, 0.723703563, 0)
+muslim.Size = UDim2.new(0, 141, 0, 48)
+muslim.Visible = false
+muslim.Style = Enum.ButtonStyle.RobloxButton
+muslim.Font = Enum.Font.Code
+muslim.Text = "Muslim"
+muslim.TextColor3 = Color3.new(1, 1, 1)
+muslim.TextSize = 15
+muslim.MouseButton1Down:connect(function()
+	game.Players:Chat("ff me")
+	game.Players:Chat("music 713412475")
+	game.Players:Chat("hat all 12436480")
+	game.Players:Chat("shirt all 3096159385")
+	game.Players:Chat("pants all 1236718158")
+	game.Players:Chat("gear all 33383241")
+	wait()
+	for e = 1,1000 do
+	game.Players:Chat("clone Hi, the person you are looking for are currently not avaiable")
+	end
+	
+end)
+
+setting.Name = "setting"
+setting.Parent = Frame
+setting.BackgroundColor3 = Color3.new(1, 1, 1)
+setting.BackgroundTransparency = 1
+setting.Position = UDim2.new(0.120223403, 0, 0.134941772, 0)
+setting.Size = UDim2.new(0, 282, 0, 36)
+setting.Visible = false
+setting.Font = Enum.Font.SourceSans
+setting.Text = "GUI Settings"
+setting.TextColor3 = Color3.new(1, 1, 1)
+setting.TextSize = 20
+
+Blue.Name = "Blue"
+Blue.Parent = Frame
+Blue.BackgroundColor3 = Color3.new(1, 1, 1)
+Blue.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Blue.BorderSizePixel = 2
+Blue.Position = UDim2.new(0.545506597, 0, 0.290795296, 0)
+Blue.Size = UDim2.new(0, 141, 0, 48)
+Blue.Visible = false
+Blue.Style = Enum.ButtonStyle.RobloxButton
+Blue.Font = Enum.Font.Code
+Blue.Text = "Not in use"
+Blue.TextColor3 = Color3.new(1, 1, 1)
+Blue.TextSize = 15
+Blue.MouseButton1Down:connect(function()
+	
+color.Visible = true
+color.ImageColor3 = Color3.new(67, 159, 220)
+end)
+Red.Name = "Red"
+Red.Parent = Frame
+Red.BackgroundColor3 = Color3.new(1, 1, 1)
+Red.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Red.BorderSizePixel = 2
+Red.Position = UDim2.new(0.0871400833, 0, 0.290795296, 0)
+Red.Size = UDim2.new(0, 141, 0, 48)
+Red.Visible = false
+Red.Style = Enum.ButtonStyle.RobloxButton
+Red.Font = Enum.Font.Code
+Red.Text = "Not in use"
+Red.TextColor3 = Color3.new(1, 1, 1)
+Red.TextSize = 15
+Red.MouseButton1Down:connect(function()
+	
+color.Visible = true
+color.ImageColor3 = Color3.new(220, 20, 24)
+	
+end)
+
+Pink.Name = "Pink"
+Pink.Parent = Frame
+Pink.BackgroundColor3 = Color3.new(1, 1, 1)
+Pink.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Pink.BorderSizePixel = 2
+Pink.Position = UDim2.new(0.0871400833, 0, 0.49185586, 0)
+Pink.Size = UDim2.new(0, 141, 0, 48)
+Pink.Visible = false
+Pink.Style = Enum.ButtonStyle.RobloxButton
+Pink.Font = Enum.Font.Code
+Pink.Text = "Not in use"
+Pink.TextColor3 = Color3.new(1, 1, 1)
+Pink.TextSize = 18
+
+Green.Name = "Green"
+Green.Parent = Frame
+Green.BackgroundColor3 = Color3.new(1, 1, 1)
+Green.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+Green.BorderSizePixel = 2
+Green.Position = UDim2.new(0.545506597, 0, 0.49185586, 0)
+Green.Size = UDim2.new(0, 141, 0, 48)
+Green.Visible = false
+Green.Style = Enum.ButtonStyle.RobloxButton
+Green.Font = Enum.Font.Code
+Green.Text = "Not in use"
+Green.TextColor3 = Color3.new(1, 1, 1)
+Green.TextSize = 15
+
+RGB.Name = "RGB"
+RGB.Parent = Frame
+RGB.BackgroundColor3 = Color3.new(1, 1, 1)
+RGB.BorderColor3 = Color3.new(0.92549, 0.92549, 0.92549)
+RGB.BorderSizePixel = 2
+RGB.Position = UDim2.new(0.545506597, 0, 0.723703563, 0)
+RGB.Size = UDim2.new(0, 141, 0, 48)
+RGB.Visible = false
+RGB.Style = Enum.ButtonStyle.RobloxButton
+RGB.Font = Enum.Font.Code
+RGB.Text = "Not in use"
+RGB.TextColor3 = Color3.new(1, 1, 1)
+RGB.TextSize = 17
+RGB.MouseButton1Down:connect(function()
+	
+
+rgb.Visible = true
+	
+end)
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Frame_2.Position = UDim2.new(-0.0515793305, 0, -0.102507125, 0)
+Frame_2.Size = UDim2.new(0, 398, 0, 405)
+Frame_2.ZIndex = 0
+Frame_2.BorderSizePixel = 5
+Frame_2.BorderColor3 = Color3.new(0.670588, 0.670588, 0.670588)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/FSQ5AsZK", true))()
+
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi 
+
+end
+
+counter = 0
+
+while wait(0.05)do
+	 rgb.ImageColor3 = Color3.fromHSV(zigzag(counter),1,1)
+ counter = counter + 0.01
+end
+
+
+--██████╗░███████╗██╗░░░██╗███████╗██╗░░░░░░█████╗░██████╗░███████╗██████╗░  ░█████╗░███╗░░██╗██████╗░
+--██╔══██╗██╔════╝██║░░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗██╔════╝██╔══██╗  ██╔══██╗████╗░██║██╔══██╗
+--██║░░██║█████╗░░╚██╗░██╔╝█████╗░░██║░░░░░██║░░██║██████╔╝█████╗░░██║░░██║  ███████║██╔██╗██║██║░░██║
+--██║░░██║██╔══╝░░░╚████╔╝░██╔══╝░░██║░░░░░██║░░██║██╔═══╝░██╔══╝░░██║░░██║  ██╔══██║██║╚████║██║░░██║
+--██████╔╝███████╗░░╚██╔╝░░███████╗███████╗╚█████╔╝██║░░░░░███████╗██████╔╝  ██║░░██║██║░╚███║██████╔╝
+--╚═════╝░╚══════╝░░░╚═╝░░░╚══════╝╚══════╝░╚════╝░╚═╝░░░░░╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░
+
+--██████╗░███████╗██╗░░░░░███████╗░█████╗░░██████╗███████╗██████╗░  ██████╗░██╗░░░██╗
+--██╔══██╗██╔════╝██║░░░░░██╔════╝██╔══██╗██╔════╝██╔════╝██╔══██╗  ██╔══██╗╚██╗░██╔╝
+--██████╔╝█████╗░░██║░░░░░█████╗░░███████║╚█████╗░█████╗░░██║░░██║  ██████╦╝░╚████╔╝░
+--██╔══██╗██╔══╝░░██║░░░░░██╔══╝░░██╔══██║░╚═══██╗██╔══╝░░██║░░██║  ██╔══██╗░░╚██╔╝░░
+--██║░░██║███████╗███████╗███████╗██║░░██║██████╔╝███████╗██████╔╝  ██████╦╝░░░██║░░░
+--╚═╝░░╚═╝╚══════╝╚══════╝╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝╚═════╝░  ╚═════╝░░░░╚═╝░░░
+
+--███╗░░░███╗░█████╗░██████╗░██╗░░██╗██╗░░░██╗███████╗░░░██╗░██╗░░░██╗██╗░█████╗░░░██╗██╗██████╗░  ██╗███████╗
+--████╗░████║██╔══██╗██╔══██╗██║░██╔╝██║░░░██║╚════██║██████████╗░██╔╝██║██╔══██╗░██╔╝██║╚════██╗  ██║██╔════╝
+--██╔████╔██║███████║██████╔╝█████═╝░██║░░░██║░░███╔═╝╚═██╔═██╔═╝██╔╝░██║╚██████║██╔╝░██║░█████╔╝  ██║█████╗░░
+--██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗░██║░░░██║██╔══╝░░██████████╗███████║░╚═══██║███████║░╚═══██╗  ██║██╔══╝░░
+--██║░╚═╝░██║██║░░██║██║░░██║██║░╚██╗╚██████╔╝███████╗╚██╔═██╔══╝╚════██║░█████╔╝╚════██║██████╔╝  ██║██║░░░░░
+--╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░╚══════╝░╚═╝░╚═╝░░░░░░░░╚═╝░╚════╝░░░░░░╚═╝╚═════╝░  ╚═╝╚═╝░░░░░
+
+--██╗░░░██╗░█████╗░██╗░░░██╗  ░█████╗░██████╗░███████╗  ░██████╗░█████╗░███╗░░░███╗███████╗██╗░░██╗░█████╗░░██╗░░░░░░░██╗
+--╚██╗░██╔╝██╔══██╗██║░░░██║  ██╔══██╗██╔══██╗██╔════╝  ██╔════╝██╔══██╗████╗░████║██╔════╝██║░░██║██╔══██╗░██║░░██╗░░██║
+--░╚████╔╝░██║░░██║██║░░░██║  ███████║██████╔╝█████╗░░  ╚█████╗░██║░░██║██╔████╔██║█████╗░░███████║██║░░██║░╚██╗████╗██╔╝
+--░░╚██╔╝░░██║░░██║██║░░░██║  ██╔══██║██╔══██╗██╔══╝░░  ░╚═══██╗██║░░██║██║╚██╔╝██║██╔══╝░░██╔══██║██║░░██║░░████╔═████║░
+--░░░██║░░░╚█████╔╝╚██████╔╝  ██║░░██║██║░░██║███████╗  ██████╔╝╚█████╔╝██║░╚═╝░██║███████╗██║░░██║╚█████╔╝░░╚██╔╝░╚██╔╝░
+--░░░╚═╝░░░░╚════╝░░╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝  ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░
+
+--██╗░░░██╗██╗███████╗░██╗░░░░░░░██╗██╗███╗░░██╗░██████╗░  ████████╗██╗░░██╗██╗░██████╗
+--██║░░░██║██║██╔════╝░██║░░██╗░░██║██║████╗░██║██╔════╝░  ╚══██╔══╝██║░░██║██║██╔════╝
+--╚██╗░██╔╝██║█████╗░░░╚██╗████╗██╔╝██║██╔██╗██║██║░░██╗░  ░░░██║░░░███████║██║╚█████╗░
+--░╚████╔╝░██║██╔══╝░░░░████╔═████║░██║██║╚████║██║░░╚██╗  ░░░██║░░░██╔══██║██║░╚═══██╗
+--░░╚██╔╝░░██║███████╗░░╚██╔╝░╚██╔╝░██║██║░╚███║╚██████╔╝  ░░░██║░░░██║░░██║██║██████╔╝
+--░░░╚═╝░░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░  ░░░╚═╝░░░╚═╝░░╚═╝╚═╝╚═════╝░
+
+--████████╗██╗░░██╗███████╗███╗░░██╗  ░██████╗░░█████╗░  ███████╗██╗░░░██╗░█████╗░██╗░░██╗
+--╚══██╔══╝██║░░██║██╔════╝████╗░██║  ██╔════╝░██╔══██╗  ██╔════╝██║░░░██║██╔══██╗██║░██╔╝
+--░░░██║░░░███████║█████╗░░██╔██╗██║  ██║░░██╗░██║░░██║  █████╗░░██║░░░██║██║░░╚═╝█████═╝░
+--░░░██║░░░██╔══██║██╔══╝░░██║╚████║  ██║░░╚██╗██║░░██║  ██╔══╝░░██║░░░██║██║░░██╗██╔═██╗░
+--░░░██║░░░██║░░██║███████╗██║░╚███║  ╚██████╔╝╚█████╔╝  ██║░░░░░╚██████╔╝╚█████╔╝██║░╚██╗
+--░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚══╝  ░╚═════╝░░╚════╝░  ╚═╝░░░░░░╚═════╝░░╚════╝░╚═╝░░╚═╝
+
+--██╗░░░██╗░█████╗░██╗░░░██╗██████╗░░██████╗███████╗██╗░░░░░███████╗
+--╚██╗░██╔╝██╔══██╗██║░░░██║██╔══██╗██╔════╝██╔════╝██║░░░░░██╔════╝
+--░╚████╔╝░██║░░██║██║░░░██║██████╔╝╚█████╗░█████╗░░██║░░░░░█████╗░░
+--░░╚██╔╝░░██║░░██║██║░░░██║██╔══██╗░╚═══██╗██╔══╝░░██║░░░░░██╔══╝░░
+--░░░██║░░░╚█████╔╝╚██████╔╝██║░░██║██████╔╝███████╗███████╗██║░░░░░
+--░░░╚═╝░░░░╚════╝░░╚═════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚══════╝╚═╝░░░░░
+
+--░█████╗░░██████╗░██████╗██╗░░██╗░█████╗░██╗░░░░░███████╗--
+--██╔══██╗██╔════╝██╔════╝██║░░██║██╔══██╗██║░░░░░██╔════╝
+--███████║╚█████╗░╚█████╗░███████║██║░░██║██║░░░░░█████╗░░--
+--██╔══██║░╚═══██╗░╚═══██╗██╔══██║██║░░██║██║░░░░░██╔══╝░░--
+--██║░░██║██████╔╝██████╔╝██║░░██║╚█████╔╝███████╗███████╗
+--╚═╝░░╚═╝╚═════╝░╚═════╝░╚═╝░░╚═╝░╚════╝░╚══════╝╚══════╝--
+
+
+
+
+
+
+
+
+
+--
+--░░░░░░░░░░░░██╗░░██╗░█████╗░██╗░░██╗░█████╗░██╗░░██╗░█████╗░  ░█████╗░██╗░░░██╗███████╗██████╗░
+--░░░░░░░░░░░░██║░░██║██╔══██╗██║░░██║██╔══██╗██║░░██║██╔══██╗  ██╔══██╗██║░░░██║██╔════╝██╔══██╗
+--█████╗█████╗███████║███████║███████║███████║███████║███████║  ██║░░██║╚██╗░██╔╝█████╗░░██████╔╝
+--╚════╝╚════╝██╔══██║██╔══██║██╔══██║██╔══██║██╔══██║██╔══██║  ██║░░██║░╚████╔╝░██╔══╝░░██╔══██╗
+--░░░░░░░░░░░░██║░░██║██║░░██║██║░░██║██║░░██║██║░░██║██║░░██║  ╚█████╔╝░░╚██╔╝░░███████╗██║░░██║
+--░░░░░░░░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝  ░╚════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝
+--░░███╗░░██████╗░░█████╗░░█████╗░  ██████╗░░█████╗░░██╗░░░░░░░██╗░██████╗  ░█████╗░███████╗
+--░████║░░╚════██╗██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗░██║░░██╗░░██║██╔════╝  ██╔══██╗██╔════╝
+--██╔██║░░░█████╔╝██║░░██║██║░░██║  ██████╔╝██║░░██║░╚██╗████╗██╔╝╚█████╗░  ██║░░██║█████╗░░
+--╚═╝██║░░░╚═══██╗██║░░██║██║░░██║  ██╔══██╗██║░░██║░░████╔═████║░░╚═══██╗  ██║░░██║██╔══╝░░
+--███████╗██████╔╝╚█████╔╝╚█████╔╝  ██║░░██║╚█████╔╝░░╚██╔╝░╚██╔╝░██████╔╝  ╚█████╔╝██║░░░░░
+--╚══════╝╚═════╝░░╚════╝░░╚════╝░  ╚═╝░░╚═╝░╚════╝░░░░╚═╝░░░╚═╝░░╚═════╝░  ░╚════╝░╚═╝░░░░░
+--
+--░█████╗░░█████╗░██████╗░███████╗  ███╗░░██╗███████╗░██╗░░░░░░░██╗
+--██╔══██╗██╔══██╗██╔══██╗██╔════╝  ████╗░██║██╔════╝░██║░░██╗░░██║
+--██║░░╚═╝██║░░██║██║░░██║█████╗░░  ██╔██╗██║█████╗░░░╚██╗████╗██╔╝
+--██║░░██╗██║░░██║██║░░██║██╔══╝░░  ██║╚████║██╔══╝░░░░████╔═████║░
+--╚█████╔╝╚█████╔╝██████╔╝███████╗  ██║░╚███║███████╗░░╚██╔╝░╚██╔╝░
+--░╚════╝░░╚════╝░╚═════╝░╚══════╝  ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░╚═╝░░
+
+--██████╗░███████╗██████╗░░██████╗░█████╗░███╗░░██╗░█████╗░██╗░░░░░  ██████╗░███████╗░██████╗████████╗░░░░░░░░░░░░
+--██╔══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗████╗░██║██╔══██╗██║░░░░░  ██╔══██╗██╔════╝██╔════╝╚══██╔══╝░░░░░░░░░░░░
+--██████╔╝█████╗░░██████╔╝╚█████╗░██║░░██║██╔██╗██║███████║██║░░░░░  ██████╦╝█████╗░░╚█████╗░░░░██║░░░█████╗█████╗
+--██╔═══╝░██╔══╝░░██╔══██╗░╚═══██╗██║░░██║██║╚████║██╔══██║██║░░░░░  ██╔══██╗██╔══╝░░░╚═══██╗░░░██║░░░╚════╝╚════╝
+--██║░░░░░███████╗██║░░██║██████╔╝╚█████╔╝██║░╚███║██║░░██║███████╗  ██████╦╝███████╗██████╔╝░░░██║░░░░░░░░░░░░░░░
+--╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚══
